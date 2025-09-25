@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="./resources/ol.css">
+        <link rel="stylesheet" href="resources/fontawesome-all.min.css">
+        <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
+        <link rel="stylesheet" href="./resources/qgis2web.css">
+        <style>
+        html, body {
+            background-color: #ffffff;
+        }
+        .ol-control > * {
+            background-color: #ffebd3!important;
+            color: #000000!important;
+            border-radius: 0px;
+        }
+        .ol-attribution a, .gcd-gl-input::placeholder, .search-layer-input-search::placeholder {
+            color: #000000!important;
+        }
+        .search-layer-input-search {
+            background-color: #ffebd3!important;
+        }
+        .ol-control > *:focus, .ol-control >*:hover {
+            background-color: rgba(255, 235, 211, 0.7)!important;
+        } 
+        .ol-control {
+            background-color: rgba(255,255,255,.4) !important;
+            padding: 2px !important;
+        } 
+        </style>
+
+        <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+        <title>Cadastro de Áreas SEDUR-PMC (informações sensíveis e não compartilháveis)</title>
+    </head>
+    <body>
+        <div id="map">
+            <div id="popup" class="ol-popup">
+                <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+                <div id="popup-content"></div>
+            </div>
+        </div>
+        <script src="resources/qgis2web_expressions.js"></script>
+        <script src="resources/polyfills.js"></script>
+        <script src="./resources/functions.js"></script>
+        <script src="./resources/ol.js"></script>
+        <script src="./resources/ol-layerswitcher.js"></script>
+        <script src="layers/RiosPerenesSEIBa25k_7.js"></script><script src="layers/reasmidasVeredasConder2010_8.js"></script><script src="layers/Trecho_Massa_DaguaConder2010_9.js"></script><script src="layers/Massa_DaguaConder2010_10.js"></script><script src="layers/rea_ImovelSICARSet2025_11.js"></script><script src="layers/ImovelRural_CEFIRINEMASet2025_12.js"></script><script src="layers/SIGEFPrivado_INCRAMar2025_13.js"></script><script src="layers/APP_Parcelamentosv10_14.js"></script><script src="layers/reasInstitucionais_Parcelamentosv10_15.js"></script><script src="layers/reasVerdes_Parcelamentosv10_16.js"></script><script src="layers/Geomais_120925_indicativopropriedade_17.js"></script><script src="layers/GeomaisSTM_080425_propriedade_18.js"></script><script src="layers/PraasdePedgiorodestaduais_19.js"></script><script src="layers/LogradourosOficializadoseouCepeados_20.js"></script><script src="layers/LinhaFrreaFCA_21.js"></script><script src="layers/EixosRodEstSEINFRABa2021_22.js"></script><script src="layers/PassarelasemRodovias_23.js"></script><script src="layers/Paradasdenibusemrodovias2022_24.js"></script><script src="layers/Pontos_IdentificaodiversosSEIBa_25.js"></script><script src="layers/PontosdeRefernciadiversosCPP2023_26.js"></script><script src="layers/Localidadesdiversas2023_27.js"></script><script src="layers/Bairros_Enderecamento_2022_CNEFE_28.js"></script><script src="layers/DistritosMunicipais2020_29.js"></script><script src="layers/LimitesMunicpiosRMS2020_30.js"></script>
+        <script src="styles/RiosPerenesSEIBa25k_7_style.js"></script><script src="styles/reasmidasVeredasConder2010_8_style.js"></script><script src="styles/Trecho_Massa_DaguaConder2010_9_style.js"></script><script src="styles/Massa_DaguaConder2010_10_style.js"></script><script src="styles/rea_ImovelSICARSet2025_11_style.js"></script><script src="styles/ImovelRural_CEFIRINEMASet2025_12_style.js"></script><script src="styles/SIGEFPrivado_INCRAMar2025_13_style.js"></script><script src="styles/APP_Parcelamentosv10_14_style.js"></script><script src="styles/reasInstitucionais_Parcelamentosv10_15_style.js"></script><script src="styles/reasVerdes_Parcelamentosv10_16_style.js"></script><script src="styles/Geomais_120925_indicativopropriedade_17_style.js"></script><script src="styles/GeomaisSTM_080425_propriedade_18_style.js"></script><script src="styles/PraasdePedgiorodestaduais_19_style.js"></script><script src="styles/LogradourosOficializadoseouCepeados_20_style.js"></script><script src="styles/LinhaFrreaFCA_21_style.js"></script><script src="styles/EixosRodEstSEINFRABa2021_22_style.js"></script><script src="styles/PassarelasemRodovias_23_style.js"></script><script src="styles/Paradasdenibusemrodovias2022_24_style.js"></script><script src="styles/Pontos_IdentificaodiversosSEIBa_25_style.js"></script><script src="styles/PontosdeRefernciadiversosCPP2023_26_style.js"></script><script src="styles/Localidadesdiversas2023_27_style.js"></script><script src="styles/Bairros_Enderecamento_2022_CNEFE_28_style.js"></script><script src="styles/DistritosMunicipais2020_29_style.js"></script><script src="styles/LimitesMunicpiosRMS2020_30_style.js"></script>
+        <script src="./layers/layers.js" type="text/javascript"></script> 
+        <script src="./resources/Autolinker.min.js"></script>
+        <script src="./resources/qgis2web.js"></script>
+    </body>
+</html>
