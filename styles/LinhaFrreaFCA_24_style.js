@@ -6,16 +6,16 @@ var style_LinhaFrreaFCA_24 = function(feature, resolution){
         feature: feature,
         variables: {}
     };
-    
-    var labelText = ""; 
-    var value = feature.get("");
+    var value = ""
+    var labelText = "";
+    size = 0;
     var labelFont = "10.4px \'Arial Black\', sans-serif";
     var labelFill = "#940007";
     var bufferColor = "";
     var bufferWidth = 0;
     var textAlign = "left";
-    var offsetX = 0;
-    var offsetY = 0;
+    var offsetX = 8;
+    var offsetY = 3;
     var placement = 'line';
     if (feature.get("nome") !== null) {
         labelText = String(feature.get("nome"));

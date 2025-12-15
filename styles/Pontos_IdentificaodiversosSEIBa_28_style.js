@@ -6,69 +6,33 @@ var style_Pontos_IdentificaodiversosSEIBa_28 = function(feature, resolution){
         feature: feature,
         variables: {}
     };
-    
-    var labelText = ""; 
+    var value = ""
+    var labelText = "";
+    var clusteredFeatures = feature.get("features");
     var labelFont = "10.4px \'Arial Black\', sans-serif";
     var labelFill = "#000ad2";
     var bufferColor = "";
     var bufferWidth = 0;
-    var textAlign = "center";
-    var offsetX = 15;
-    var offsetY = 10;
-    var feature
-	var value
-    var clusteredFeatures = feature.get("features");
     size = clusteredFeatures.length;
-    if (size == 1) { // If cluster has one feature
+    var textAlign = "center";
+    var offsetX = 0;
+    var offsetY = 0;
+    if (size == 1) {
+        textAlign = "left"
+        offsetX = 8
+        offsetY = 3
         var feature = clusteredFeatures[0];
-        value = clusteredFeatures[0].get("");
         if (feature.get("nome") !== null) {
             labelText = String(feature.get("nome"));
         }
-    } else { // If cluster has more than one feature
-		labelText = size.toString();
-		var radius = 6 + Math.log(size) * 3;
-		var maxClusterSize = 80;
-		var relativeSize = Math.min(size / maxClusterSize, 1);
-		var redComponent, greenComponent, blueComponent = 0;
-		if (relativeSize < 0.5) {
-			redComponent = Math.floor(210 * (relativeSize / 0.5));
-			greenComponent = 210;
-		} else {
-			redComponent = 210;
-			greenComponent = Math.floor(210 * (1 - (relativeSize - 0.5) / 0.5));
-		}
-		var color = `rgba(${redComponent}, ${greenComponent}, ${blueComponent}, 0.75)`;
-		return [
-			new ol.style.Style({
-				image: new ol.style.Circle({
-					radius: radius + 4,
-					fill: new ol.style.Fill({
-						color: `rgba(${redComponent}, ${greenComponent}, ${blueComponent}, 0.3)`
-					})
-				})
-			}),
-			new ol.style.Style({
-				image: new ol.style.Circle({
-					radius: radius,
-					fill: new ol.style.Fill({
-						color: color
-					})
-				}),
-				text: new ol.style.Text({
-					font: labelFont,
-					text: labelText,
-					fill: new ol.style.Fill({
-						color: labelFill
-					}),
-					placement: placement
-				})
-			})
-		];
-	}
+        key = value + "_" + labelText
+    } else {
+        labelText = size.toString()
+        size = 2*(Math.log(size)/ Math.log(2))
+    }
     var style = [ new ol.style.Style({
         image: new ol.style.Circle({radius: 2.4 + size,
-            displacement: [0, 0],  fill: new ol.style.Fill({color: 'rgba(0,10,210,1.0)'})}),
+             fill: new ol.style.Fill({color: 'rgba(0,10,210,1.0)'})}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)

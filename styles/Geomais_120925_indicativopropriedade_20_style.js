@@ -6,16 +6,16 @@ var style_Geomais_120925_indicativopropriedade_20 = function(feature, resolution
         feature: feature,
         variables: {}
     };
-    
-    var labelText = ""; 
-    var value = feature.get("");
+    var value = ""
+    var labelText = "";
+    size = 0;
     var labelFont = "13.0px \'Arial\', sans-serif";
     var labelFill = "#000000";
     var bufferColor = "#fff201";
-    var bufferWidth = 2.0999999999999996;
+    var bufferWidth = 0.7;
     var textAlign = "left";
-    var offsetX = 0;
-    var offsetY = 0;
+    var offsetX = 8;
+    var offsetY = 3;
     var placement = 'point';
     if (feature.get("PROPRIEDAD") !== null) {
         labelText = String(feature.get("PROPRIEDAD"));

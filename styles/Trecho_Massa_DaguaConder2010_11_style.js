@@ -6,16 +6,16 @@ var style_Trecho_Massa_DaguaConder2010_11 = function(feature, resolution){
         feature: feature,
         variables: {}
     };
-    
-    var labelText = ""; 
-    var value = feature.get("");
+    var value = ""
+    var labelText = "";
+    size = 0;
     var labelFont = "10px, sans-serif";
     var labelFill = "#000000";
     var bufferColor = "";
     var bufferWidth = 0;
     var textAlign = "left";
-    var offsetX = 0;
-    var offsetY = 0;
+    var offsetX = 8;
+    var offsetY = 3;
     var placement = 'point';
     if ("" !== null) {
         labelText = String("");
